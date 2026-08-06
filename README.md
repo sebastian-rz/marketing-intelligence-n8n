@@ -90,7 +90,7 @@ Najciekawszy element systemu. Analiza z jednego tygodnia zmienia to, czego syste
 ```
 pn 6:30   STEP 4  →  czyta apify_configs  →  odpala aktorów Apify  →  zapis do apify_rynek
 
-pn -   STEP 3  →  czyta apify_rynek + własne dane
+pn 9:00   STEP 3  →  czyta apify_rynek + własne dane
                   →  STRATEG 2 zwraca apify_zmiany:
                        { hashtagi_dodac[], hashtagi_usunac[], zapytania[] }
                   →  kod normalizuje, transliteruje polskie znaki, deduplikuje
