@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sebastian Rzadkiewicz - automatyzacja procesów (n8n, Make.com)</title>
+<meta name="description" content="Portfolio automatyzacji procesów. Autonomiczny system marketing intelligence: 5 workflow n8n, 118 nodes, 13 tabel Supabase, 8 zewnętrznych API.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A1420; --bg2:#0E1B2B; --line:#21354D;
+  --orange:#F07C1F; --text:#DCE5EF; --muted:#93A4B8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:'Lato',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6; font-size:17px;
+  background-image:radial-gradient(ellipse at 20% -10%, #12243A 0%, transparent 55%),
+                   radial-gradient(ellipse at 90% 5%, #10202F 0%, transparent 45%);
+  background-repeat:no-repeat;
+}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+a{color:var(--orange);text-decoration:none}
+a:hover{text-decoration:underline}
+
+header{padding:72px 0 40px}
+.eyebrow{font-size:13px;font-weight:900;letter-spacing:2.4px;text-transform:uppercase;color:var(--orange)}
+h1{font-size:clamp(34px,6vw,52px);font-weight:900;line-height:1.05;margin:14px 0 0;letter-spacing:-.5px}
+h1 span{color:var(--orange)}
+.sub{font-size:clamp(17px,2.4vw,21px);color:var(--muted);margin-top:16px;font-weight:300}
+.sub b{color:var(--text);font-weight:700}
+
+.metrics{display:flex;flex-wrap:wrap;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:44px 0}
+.metric{flex:1 1 150px;background:var(--bg2);padding:22px 20px}
+.metric .n{font-size:30px;font-weight:900;color:var(--orange);line-height:1}
+.metric .l{font-size:11.5px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:var(--muted);margin-top:8px}
+
+section{padding:34px 0;border-top:1px solid var(--line)}
+h2{font-size:13px;font-weight:900;letter-spacing:2.2px;text-transform:uppercase;color:var(--orange);margin-bottom:20px}
+h3{font-size:22px;font-weight:900;margin:0 0 8px}
+p{margin-bottom:16px;color:#C6D3E1}
+p:last-child{margin-bottom:0}
+strong{color:#fff;font-weight:700}
+
+.card{background:var(--bg2);border:1px solid var(--line);border-left:3px solid var(--orange);border-radius:10px;padding:26px 28px}
+.tags{font-size:13px;font-weight:700;letter-spacing:.6px;color:var(--orange);text-transform:uppercase;margin-bottom:18px}
+
+ul{list-style:none;margin-bottom:16px}
+li{padding-left:22px;position:relative;margin-bottom:10px;color:#C6D3E1}
+li:before{content:'▪';position:absolute;left:0;color:var(--orange)}
+li b{color:#fff}
+
+.grid{display:flex;flex-wrap:wrap;gap:14px}
+.box{flex:1 1 260px;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:20px 22px}
+.box h4{font-size:15px;font-weight:900;color:#fff;margin-bottom:8px}
+.box p{font-size:14.5px;margin:0;color:var(--muted)}
+
+pre{background:#08111C;border:1px solid var(--line);border-radius:8px;padding:18px;overflow-x:auto;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;line-height:1.6;color:#A9BACC}
+pre b{color:var(--orange);font-weight:700}
+
+.btn{display:inline-block;border:1px solid var(--orange);color:var(--orange);border-radius:40px;
+     padding:11px 24px;font-weight:700;font-size:15px;margin:6px 10px 6px 0}
+.btn:hover{background:var(--orange);color:#08111C;text-decoration:none}
+
+footer{padding:40px 0 70px;border-top:1px solid var(--line);color:var(--muted);font-size:14.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Automatyzacja procesów · n8n · Make.com</div>
+  <h1>Sebastian <span>Rzadkiewicz</span></h1>
+  <p class="sub">Buduję systemy, które <b>podejmują decyzje i działają bez człowieka</b>.
+  Sześć lat przy automatyzacji - najpierw programując zrobotyzowane stanowiska spawalnicze
+  na produkcji, dziś w n8n i Make.com.</p>
+
+  <div class="metrics">
+    <div class="metric"><div class="n">118</div><div class="l">nodes w 5 workflow</div></div>
+    <div class="metric"><div class="n">13</div><div class="l">tabel Supabase</div></div>
+    <div class="metric"><div class="n">8</div><div class="l">zewnętrznych API</div></div>
+    <div class="metric"><div class="n">6</div><div class="l">wywołań LLM</div></div>
+  </div>
+</header>
+
+<section>
+  <h2>Projekt flagowy</h2>
+  <div class="card">
+    <h3>Autonomiczny system marketing intelligence</h3>
+    <div class="tags">n8n · Claude (Anthropic API) · Supabase · Apify</div>
+    <p>Pięć workflow, które codziennie zbierają dane z ośmiu źródeł, raz w tygodniu je analizują,
+    flagują kampanie reklamowe do wyłączenia albo zwiększenia budżetu i układają plan treści
+    na cztery tygodnie. System pracuje na produkcji i obsługuje realny sklep e-commerce.</p>
+    <ul>
+      <li><b>Codziennie o 7:00</b> - zbiera dane z Facebook Graph, Instagram, Facebook Ads,
+        YouTube, Google Analytics 4, API GUS i własnego pixela</li>
+      <li><b>Poniedziałek 8:00</b> - flaguje każdą kampanię: zwiększ, trzymaj, wyłącz.
+        Na podstawie kosztu za wynik zestawionego ze współczynnikiem odrzuceń z pixela</li>
+      <li><b>Poniedziałek 9:00</b> - generuje plan treści z blokadą powtarzania
+        opublikowanych już tematów</li>
+    </ul>
+    <a class="btn" href="https://github.com/sebastian-rz/marketing-intelligence-n8n">Pełny opis techniczny</a>
+  </div>
+</section>
+
+<section>
+  <h2>Decyzja projektowa</h2>
+  <h3 style="margin-bottom:16px">Co robi kod, a co model językowy</h3>
+  <p>Nie wszystko trafia do modelu. Decyzje o pieniądzach muszą być powtarzalne i audytowalne -
+  ten sam zestaw danych wejściowych zawsze da tę samą flagę, i da się to odtworzyć oraz
+  wytłumaczyć. Model dostaje zadania, w których nie istnieje jedna poprawna odpowiedź:
+  interpretację trendów i dobór tematów treści.</p>
+  <p><strong>Zasada jest prosta: co da się zapisać regułą, zapisuję regułą.</strong></p>
+  <div class="grid">
+    <div class="box"><h4>Kod deterministyczny</h4>
+      <p>Flagowanie budżetu kampanii · ranking wzorów produktowych na sygnałach
+      behawioralnych · scalanie konfiguracji skanu rynku</p></div>
+    <div class="box"><h4>Model językowy</h4>
+      <p>Co zadziałało i dlaczego · jakie tematy chwytają w niszy · dopasowanie
+      targetu · tematy treści na kolejne tygodnie</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Pętla samo-korygująca</h2>
+  <p>Analiza z jednego tygodnia zmienia to, czego system szuka w tygodniu kolejnym.
+  Nikt nie edytuje listy zapytań ręcznie.</p>
+<pre>pn 6:30   STEP 4  →  czyta apify_configs  →  odpala aktorów Apify
+
+pn 8:00   STEP 3  →  analizuje rynek + własne dane
+                  →  model zwraca: hashtagi_dodac[], hashtagi_usunac[]
+                  →  kod normalizuje, transliteruje, deduplikuje
+                  →  PATCH apify_configs
+
+pn 6:30   STEP 4  →  czyta apify_configs  <b>←  JUŻ ZE ZMIENIONĄ LISTĄ</b>
+(za tydzień)</pre>
+  <p><strong>Bezpiecznik:</strong> jeżeli po usunięciach zostałoby mniej niż dwa zapytania,
+  kod przywraca poprzednią listę. Model nie może jednym błędnym wynikiem wyłączyć
+  całego skanu rynku.</p>
+</section>
+
+<section>
+  <h2>Wybrane problemy produkcyjne</h2>
+  <ul>
+    <li><b>Prompt przekraczał okno kontekstu.</b> Payload jsonb ~5 KB na wiersz zabijał prompt.
+      Rozwiązanie: projekcja tylko lekkich pól plus twardy limit wierszy.</li>
+    <li><b>Model zwracał JSON w blokach markdown.</b> Parser wycina zakres od pierwszego
+      nawiasu klamrowego do ostatniego, a przy niepowodzeniu zapisuje poprawny strukturalnie
+      wiersz zamiast przerwać przepływ.</li>
+    <li><b>Nazwy kampanii nie pasowały do danych z pixela.</b> Klucz rozmyty: usunięcie
+      prefiksów, cudzysłowów typograficznych i znaków niealfanumerycznych.</li>
+    <li><b>Model traktował NULL jako zero.</b> Brak danych o zasięgu był czytany jako zerowy
+      zasięg. Naprawione po stronie promptu, jawną instrukcją.</li>
+  </ul>
+  <a class="btn" href="flaga-budzetu.js">flaga-budzetu.js</a>
+  <a class="btn" href="scal-configi.js">scal-configi.js</a>
+  <a class="btn" href="ranking-wzorow.js">ranking-wzorow.js</a>
+</section>
+
+<footer>
+  <p><strong>Sebastian Rzadkiewicz</strong> - automatyzacja procesów, n8n i Make.com, Warszawa</p>
+  <p style="margin-top:10px">
+https://www.linkedin.com/in/sebastian-r-73b85a398/
+  </p>
+  <p style="font-size:13px;margin-top:18px;color:#6C7C8E">
+    Repozytorium zawiera opis architektury i wybrane fragmenty logiki.
+    Nie zawiera eksportów workflow ani poświadczeń - system pracuje na produkcji.
+  </p>
+</footer>
+
+</div>
+</body>
+</html>
