@@ -30,6 +30,10 @@ System działa produkcyjnie i obsługuje realny sklep e-commerce - codziennie o 
 | poniedziałek 9:00 | **STEP 3** - strateg | Wyciąga wnioski, buduje ranking wzorów produktowych, zapisuje nową konfigurację skanu |
 | poniedziałek 10:00 | **STEP 5** - plan | Układa kalendarz treści na 4 tygodnie z blokadą powtarzania tematów |
 
+
+![Przepływ STEP 1](workflow-step1.png)
+
+
 ### Przepływ
 
 ```mermaid
@@ -143,8 +147,6 @@ Kolejne kroki czytają z bazy okno czternastodniowe, nie ostatni wynik. Jeden ni
 ## Czego tu nie ma
 
 Repozytorium zawiera opis architektury i wybrane fragmenty logiki. **Nie zawiera** eksportów workflow ani żadnych poświadczeń, adresów bazy czy identyfikatorów kont - system pracuje na produkcji.
-
-![Przepływ STEP 1](Zrzut%20ekranu%202026-08-06%20172411.png)
 
 ---
 
