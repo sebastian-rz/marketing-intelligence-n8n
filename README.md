@@ -144,6 +144,8 @@ Kolejne kroki czytają z bazy okno czternastodniowe, nie ostatni wynik. Jeden ni
 
 Repozytorium zawiera opis architektury i wybrane fragmenty logiki. **Nie zawiera** eksportów workflow ani żadnych poświadczeń, adresów bazy czy identyfikatorów kont - system pracuje na produkcji.
 
+![Przepływ STEP 1](Zrzut%20ekranu%202026-08-06%20172411.png)
+
 ---
 
 ## Kontakt
